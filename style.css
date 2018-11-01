@@ -1,0 +1,31 @@
+#comments_edit {
+	min-height: 100px;
+	padding: 10px;
+	border: black 1px solid;
+	border-radius: 10px;
+	resize: vertical;
+	overflow: auto;
+
+	/** 只允许输入纯文本 */
+	user-modify: read-write-plaintext-only;
+	-o-user-modify: read-write-plaintext-only;
+	-ms-user-modify: read-write-plaintext-only;
+	-moz-user-modify: read-write-plaintext-only;
+	-webkit-user-modify: read-write-plaintext-only;
+}
+
+[contentEditable=true]:empty:before {
+	/** 显示提示 */
+	content: attr(placeholder);
+	color: #555;
+}
+
+.emoji {
+	width: 80px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+#comments_edit .emoji {
+	margin: 0;
+}
